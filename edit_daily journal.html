@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Edit Entry</h2>
+<form action="" method="post">
+    <input type="date" name="date" value="{{ entry.date }}" required>
+    <input type="text" name="time" value="{{ entry.time }}" required>
+    <input type="text" name="title" value="{{ entry.title }}" required>
+    <textarea name="content" required>{{ entry.content }}</textarea>
+    <input type="text" name="mood" value="{{ entry.mood }}" placeholder="Mood (e.g., Happy, Sad)">
+    <input type="text" name="weather" value="{{ entry.weather }}" placeholder="Weather (e.g., Sunny)">
+    <textarea name="activities" placeholder="Activities">{{ entry.activities }}</textarea>
+    <textarea name="reflections" placeholder="Reflections">{{ entry.reflections }}</textarea>
+    <textarea name="gratitude" placeholder="What you're grateful for">{{ entry.gratitude }}</textarea>
+    <textarea name="goals" placeholder="Goals for tomorrow">{{ entry.goals }}</textarea>
+    <button type="submit">Update Entry</button>
+</form>
+{% endblock %}
